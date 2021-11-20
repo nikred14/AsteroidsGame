@@ -50,7 +50,6 @@ class Spaceship extends Floater {
     }
   }
   public void speedCap() {
-    int maxSpeed = 3;
     if (myXspeed == 0) {
       if (myYspeed > maxSpeed) {
         myYspeed = maxSpeed;
@@ -77,7 +76,8 @@ class Spaceship extends Floater {
       }
     }
   }
-  public void exhaust() {            
+  public void exhaust() { 
+    
     fill(255, 192, 0);
 
     translate((float)myCenterX, (float)myCenterY);
@@ -87,14 +87,9 @@ class Spaceship extends Floater {
     line(-15, 0, -25, 0); //center
     line(-15, 5, -20, 10); //right
     line(-15, -5, -20, -10); //left
-    //triangle(-10, 0, -20, 5, -20 , -5);
 
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
-
-    double myBackX = myCenterX - (6 * Math.cos(myPointDirection));
-    double myBackY = myCenterY - (6 * Math.sin(myPointDirection));
-    double angle = 30;
-    //line(myBackX+, myBackY, myBackX
+    
   }
 }
